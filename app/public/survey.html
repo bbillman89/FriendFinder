@@ -13,7 +13,7 @@
         <h2>
             Survey Questions
         </h2>
-        <form>
+        <form id="form">
             <fieldset>
                 <legend>About You</legend>
                 <label>Name</label>
@@ -24,7 +24,8 @@
             </fieldset>
 
             <fieldset>
-                <legend>Your mind is always buzzing with unexplored ideas and plans.</legend>
+                <legend>Question 1</legend>
+                <label>Your mind is always buzzing with unexplored ideas and plans.</label>
                 <select id="q1">
                     <option value=""></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -32,10 +33,12 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
-                <legend>Generally speaking, you rely more on your experience than your imagination.</legend>
+                <legend>Question 2</legend>
+                <label>Generally speaking, you rely more on your experience than your imagination.</label>
                 <select id="q2">
                     <option value=""></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -43,10 +46,12 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
-                <legend>You find it easy to stay relaxed and focused even when there is some pressure.</legend>
+                <legend>Question 3</legend>
+                <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
                 <select id="q3">
                     <option value=""></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -54,6 +59,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -66,6 +72,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -78,6 +85,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -90,6 +98,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -102,6 +111,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -114,6 +124,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -126,6 +137,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -138,6 +150,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (strongly agree)</option>
+                </select>
             </fieldset>
 
             <input type="submit" value="submit" id="submit">
@@ -147,7 +160,7 @@
     <footer>
         <ul>            
             <a href="/api/friends"><li>API friends list</li></a>
-            <a href="https://github.com/bbillman89/FriendFinder"><li>GitHub Repo</li></a>
+            <a href="https://github.com/bbillman89/FriendFinder" target="_blank"><li>GitHub Repo</li></a>
         </ul>
     </footer>
 </body>
@@ -161,17 +174,28 @@
       var newFriend = {
         name: $("#username").val().trim(),
         photo: $("#photo").val().trim(),
-        scores: $("#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10").val().trim(),
+        scores: [
+            $("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
+            $("#q4").val().trim(),
+            $("#q5").val().trim(),
+            $("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
+            $("#q10").val().trim()
+        ]
       };
   
       console.log(newFriend);
   
-      $.post("/api/tables", newFriend,
+      $.post("/api/friends", newFriend,
         function(data) {
-
-          $("#form").reset();
-  
+            console.log(data);
         });
+
+        $("#form")[0].reset();
   
     });
   
