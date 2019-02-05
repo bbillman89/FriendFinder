@@ -13,6 +13,22 @@ module.exports = function(app) {
 
     //Run Comparison here
 
+    let userScoresNumber = [];
+    //loop to convert strings to ints
+    for (let index of req.body.scores){
+      userScoresNumber.push(parseInt(index));
+    }
+
+    //loop through each friend in the data file
+
+    //loop through each score per friend
+    for (let index of friendsData[0].scores){
+      let 
+    }
+
+    //console.log(userScoresNumber);
+    console.log(friendsData[0].scores);
+
   });
 
 };
