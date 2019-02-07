@@ -7,28 +7,37 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
+
+    let newFriend = req.body;
+    let tdValues = [];
+
+    for (let index of friendsData) {
+      let comp = index.scores;
+      let totalDif = 0;
+
+      for (let i = 0; i < newFriend.scores.length; i++) {
+        totalDif += Math.abs(comp[i] - newFriend.scores[i]);
+      }
+
+      tdValues.push(totalDif);
+    }
+
+    let totalDifComp = tdValues[0];
+    
+    for (let index of tdValues) {
+
+      if (index < totalDifComp) {
+        totalDifComp = index;
+      }
+
+    }
+
+    let indexofMatch = tdValues.indexOf(totalDifComp);
+    let match = friendsData[indexofMatch];
+
+    friendsData.push(newFriend);
+    res.json(match);
       
-    friendsData.push(req.body);
-    res.json(true);
-
-    //Run Comparison here
-
-    let userScoresNumber = [];
-    //loop to convert strings to ints
-    for (let index of req.body.scores){
-      userScoresNumber.push(parseInt(index));
-    }
-
-    //loop through each friend in the data file
-
-    //loop through each score per friend
-    for (let index of friendsData[0].scores){
-      let 
-    }
-
-    //console.log(userScoresNumber);
-    console.log(friendsData[0].scores);
-
   });
 
 };
