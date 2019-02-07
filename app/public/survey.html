@@ -163,8 +163,24 @@
             <a href="https://github.com/bbillman89/FriendFinder" target="_blank"><li>GitHub Repo</li></a>
         </ul>
     </footer>
-</body>
-</html>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+
+        <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" src="" alt="">
+        </div>
+    </div>
+
+</div>
 
 <script type="text/javascript">
   
@@ -190,15 +206,27 @@
             ]
         };
 
-        console.log(newFriend);
-
         $.post("/api/friends", newFriend, function(data) {
-            
+
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+            //displayModal();
         });
+        
+        //function displayModal(){
+            $("#myModal").show();
+    
+            $(".close").click(function(){
+                $("#myModal").hide();
+            });    
+        //}
 
         $("#form")[0].reset();
 
     });
   
-  </script>
+</script>
+</body>
+</html>
+
   
