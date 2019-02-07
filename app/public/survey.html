@@ -9,178 +9,180 @@
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
-    <main>
-        <h2>
-            Survey Questions
-        </h2>
-        <form id="form">
-            <fieldset>
-                <legend>About You</legend>
-                <label>Name</label>
-                <input type="text" name="username" id="username" required>
-    
-                <label>Link to Photo</label>
-                <input type="text" name="photo" id="photo" required>
-            </fieldset>
+    <div id="main-container">
+        <main>
+            <h2>
+                Survey Questions
+            </h2>
+            <form id="form">
+                <fieldset>
+                    <legend>About You</legend>
+                    <label>Name</label>
+                    <input type="text" name="username" id="username" required>
+        
+                    <label>Link to Photo</label>
+                    <input type="text" name="photo" id="photo" required>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 1</legend>
-                <label>Your mind is always buzzing with unexplored ideas and plans.</label>
-                <select id="q1">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 1</legend>
+                    <label>Your mind is always buzzing with unexplored ideas and plans.</label>
+                    <select id="q1">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 2</legend>
-                <label>Generally speaking, you rely more on your experience than your imagination.</label>
-                <select id="q2">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 2</legend>
+                    <label>Generally speaking, you rely more on your experience than your imagination.</label>
+                    <select id="q2">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 3</legend>
-                <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
-                <select id="q3">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 3</legend>
+                    <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                    <select id="q3">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 4</legend>
-                <label>You rarely do something just out of sheer curiosity.</label>
-                <select id="q4">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 4</legend>
+                    <label>You rarely do something just out of sheer curiosity.</label>
+                    <select id="q4">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 5</legend>
-                <label>People can rarely upset you.</label>
-                <select id="q5">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 5</legend>
+                    <label>People can rarely upset you.</label>
+                    <select id="q5">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 6</legend>
-                <label>It is often difficult for you to relate to other people’s feelings.</label>
-                <select id="q6">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 6</legend>
+                    <label>It is often difficult for you to relate to other people’s feelings.</label>
+                    <select id="q6">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 7</legend>
-                <label>In a discussion, truth should be more important than people’s sensitivities.</label>
-                <select id="q7">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 7</legend>
+                    <label>In a discussion, truth should be more important than people’s sensitivities.</label>
+                    <select id="q7">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 8</legend>
-                <label>You rarely get carried away by fantasies and ideas.</label>
-                <select id="q8">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 8</legend>
+                    <label>You rarely get carried away by fantasies and ideas.</label>
+                    <select id="q8">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 9</legend>
-                <label>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
-                <select id="q9">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 9</legend>
+                    <label>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                    <select id="q9">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <fieldset>
-                <legend>Question 10</legend>
-                <label>You feel more energetic after spending time with a group of people.</label>
-                <select id="q10">
-                    <option value=""></option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </fieldset>
+                <fieldset>
+                    <legend>Question 10</legend>
+                    <label>You feel more energetic after spending time with a group of people.</label>
+                    <select id="q10">
+                        <option value=""></option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </fieldset>
 
-            <input type="submit" value="submit" id="submit">
+                <input type="submit" value="submit" id="submit">
 
-        </form>
-    </main>
-    <footer>
-        <ul>            
-            <a href="/api/friends"><li>API friends list</li></a>
-            <a href="https://github.com/bbillman89/FriendFinder" target="_blank"><li>GitHub Repo</li></a>
-        </ul>
-    </footer>
-
-<!-- Modal -->
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
-        </div>
-
-        <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" src="" alt="">
-        </div>
+            </form>
+        </main>
+        <footer>
+            <ul>            
+                <a href="/api/friends"><li>API friends list</li></a>
+                <a href="https://github.com/bbillman89/FriendFinder" target="_blank"><li>GitHub Repo</li></a>
+            </ul>
+        </footer>
     </div>
 
-</div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+
+            <div class="modal-body">
+                <h2 id="match-name"></h2>
+                <img id="match-img" src="" alt="">
+            </div>
+        </div>
+
+    </div>
 
 <script type="text/javascript">
   
